@@ -1,0 +1,495 @@
+@font-face {
+    font-family: elm;
+    src: url(ElegantLux-Mager.otf);
+}
+
+@font-face {
+    font-family: pier;
+    src: url(pier-regular.otf);
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  min-height: 400px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+p {
+	font-family: pier;
+}
+
+ul {
+	text-align: left;
+}
+
+::-moz-selection {
+	background-color:Transparent;
+}
+
+::selection {
+	background-color:Transparent;
+}
+
+@-moz-keyframes pulse {
+    50% { -moz-transform: scale(1.1); }
+}
+
+@-webkit-keyframes pulse {
+    50% { -webkit-transform: scale(1.1); }
+}
+
+@keyframes pulse {
+    50% { transform: scale(1.1); }
+}
+
+.pulse {
+    -webkit-transition: transform 0.2s ease-out;
+
+    -moz-animation-name: pulse;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 2s;
+    
+    -webkit-animation-name: pulse;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+    
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@-moz-keyframes pulseonce {
+    50% { -moz-transform: scale(1.25); }
+}
+
+@-webkit-keyframes pulseonce {
+    50% { -webkit-transform: scale(1.25); }
+}
+
+@keyframes pulseonce {
+    50% { transform: scale(1.25); }
+}
+
+.pulseonce {
+    -webkit-transition: transform 0.2s ease-out;
+
+    -moz-animation-name: pulseonce;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-duration: 1s;
+    
+    -webkit-animation-name: pulseonce;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 1s;
+    
+    animation-name: pulseonce;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+/* =============================================================================
+============================== The Three Facets ================================
+================================================================================
+*/
+
+.facet {
+	width:100%;
+	height: 100%;
+}
+
+.facet.morning,.innercircle.morning {
+	/*top is bad*/
+	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#4f6dab), color-stop(0.012, #516fad), color-stop(0.017, #506fac), color-stop(0.043, #5271b1), color-stop(0.056, #5474b1), color-stop(0.064, #5472b2), color-stop(0.081, #5674b4), color-stop(0.09, #5673b5), color-stop(0.094, #5675b6), color-stop(0.099, #5776b7), color-stop(0.107, #5678b8), color-stop(0.185, #6082c2), color-stop(0.211, #6385c5), color-stop(0.215, #6584c5), color-stop(0.254, #6689c9), color-stop(0.262, #6988c9), color-stop(0.267, #698bcb), color-stop(0.314, #6d91d1), color-stop(0.323, #6d95d3), color-stop(0.349, #7097d2), color-stop(0.357, #7498d2), color-stop(0.362, #7398d0), color-stop(0.366, #7498d0), color-stop(0.396, #799cd4), color-stop(0.426, #82a1d7), color-stop(0.461, #8aa5d6), color-stop(0.491, #8ea9d6), color-stop(0.5, #90aad6), color-stop(0.504, #92aad6), color-stop(0.517, #96afd8), color-stop(0.525, #97afd8), color-stop(0.538, #99b3d5), color-stop(0.543, #9bb4d5), color-stop(0.547, #9cb5d4), color-stop(0.56, #a3b7d6), color-stop(0.573, #a7b6d5), color-stop(0.581, #a9b8d5), color-stop(0.625, #b7c0d0), color-stop(0.629, #b9bfcf), color-stop(0.646, #bfc0cc), color-stop(0.655, #c2c2cc), color-stop(0.668, #c4c5ca), color-stop(0.676, #c6c5ca), color-stop(0.693, #cac8cb), color-stop(0.706, #cfcacb), color-stop(0.732, #d9cecc), color-stop(0.737, #dacfcb), color-stop(0.741, #ddcfcb), color-stop(0.762, #e2d0c1), color-stop(0.767, #e4d2c1), color-stop(0.775, #e9d2bf), color-stop(0.801, #eed3b5), color-stop(0.81, #f0d3b3), color-stop(0.814, #f1d3b1), color-stop(0.823, #f3d3ad), color-stop(0.827, #f3d3aa), color-stop(0.836, #f6d4a7), color-stop(0.84, #f7d2a4), color-stop(0.849, #f8d19e), color-stop(0.853, #f9d09b), color-stop(0.862, #facf95), color-stop(0.87, #fcce90), color-stop(0.875, #fbce8c), color-stop(0.883, #fccd88), color-stop(0.883, #fecc83), color-stop(0.892, #fec77c), color-stop(0.896, #fec47a), color-stop(0.9, #fec377), color-stop(0.905, #ffc072), color-stop(0.909, #ffbd6e), color-stop(0.918, #feb765), color-stop(0.926, #feaf62), color-stop(0.935, #faa15a), color-stop(0.952, #ef8656), color-stop(0.956, #ed8256), color-stop(0.974, #da7059), color-stop(0.978, #da7059), color-stop(0.978, #cc6657), color-stop(0.982, #be6056), color-stop(0.987, #b15c59), color-stop(0.991, #a05859), color-stop(0.995, #90595e), to(#90595e));
+	background-image: -webkit-linear-gradient(top, #4f6dab, #516fad 1.2%, #506fac 1.7%, #5271b1 4.3%, #5474b1 5.6%, #5472b2 6.4%, #5674b4 8.1%, #5673b5 9%, #5675b6 9.4%, #5776b7 9.9%, #5678b8 10.7%, #6082c2 18.5%, #6385c5 21.1%, #6584c5 21.5%, #6689c9 25.4%, #6988c9 26.2%, #698bcb 26.7%, #6d91d1 31.4%, #6d95d3 32.3%, #7097d2 34.9%, #7498d2 35.7%, #7398d0 36.2%, #7498d0 36.6%, #799cd4, #82a1d7 42.6%, #8aa5d6 46.1%, #8ea9d6 49.1%, #90aad6 50%, #92aad6 50.4%, #96afd8 51.7%, #97afd8 52.5%, #99b3d5 53.8%, #9bb4d5 54.3%, #9cb5d4 54.7%, #a3b7d6, #a7b6d5 57.3%, #a9b8d5 58.1%, #b7c0d0 62.5%, #b9bfcf 62.9%, #bfc0cc 64.6%, #c2c2cc 65.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+	background-image: -moz-linear-gradient(top, #4f6dab, #516fad 1.2%, #506fac 1.7%, #5271b1 4.3%, #5474b1 5.6%, #5472b2 6.4%, #5674b4 8.1%, #5673b5 9%, #5675b6 9.4%, #5776b7 9.9%, #5678b8 10.7%, #6082c2 18.5%, #6385c5 21.1%, #6584c5 21.5%, #6689c9 25.4%, #6988c9 26.2%, #698bcb 26.7%, #6d91d1 31.4%, #6d95d3 32.3%, #7097d2 34.9%, #7498d2 35.7%, #7398d0 36.2%, #7498d0 36.6%, #799cd4, #82a1d7 42.6%, #8aa5d6 46.1%, #8ea9d6 49.1%, #90aad6 50%, #92aad6 50.4%, #96afd8 51.7%, #97afd8 52.5%, #99b3d5 53.8%, #9bb4d5 54.3%, #9cb5d4 54.7%, #a3b7d6, #a7b6d5 57.3%, #a9b8d5 58.1%, #b7c0d0 62.5%, #b9bfcf 62.9%, #bfc0cc 64.6%, #c2c2cc 65.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+	background-image: -o-linear-gradient(top, #4f6dab, #516fad 1.2%, #506fac 1.7%, #5271b1 4.3%, #5474b1 5.6%, #5472b2 6.4%, #5674b4 8.1%, #5673b5 9%, #5675b6 9.4%, #5776b7 9.9%, #5678b8 10.7%, #6082c2 18.5%, #6385c5 21.1%, #6584c5 21.5%, #6689c9 25.4%, #6988c9 26.2%, #698bcb 26.7%, #6d91d1 31.4%, #6d95d3 32.3%, #7097d2 34.9%, #7498d2 35.7%, #7398d0 36.2%, #7498d0 36.6%, #799cd4, #82a1d7 42.6%, #8aa5d6 46.1%, #8ea9d6 49.1%, #90aad6 50%, #92aad6 50.4%, #96afd8 51.7%, #97afd8 52.5%, #99b3d5 53.8%, #9bb4d5 54.3%, #9cb5d4 54.7%, #a3b7d6, #a7b6d5 57.3%, #a9b8d5 58.1%, #b7c0d0 62.5%, #b9bfcf 62.9%, #bfc0cc 64.6%, #c2c2cc 65.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+	background-image: linear-gradient(to bottom, #4f6dab, #516fad 1.2%, #506fac 1.7%, #5271b1 4.3%, #5474b1 5.6%, #5472b2 6.4%, #5674b4 8.1%, #5673b5 9%, #5675b6 9.4%, #5776b7 9.9%, #5678b8 10.7%, #6082c2 18.5%, #6385c5 21.1%, #6584c5 21.5%, #6689c9 25.4%, #6988c9 26.2%, #698bcb 26.7%, #6d91d1 31.4%, #6d95d3 32.3%, #7097d2 34.9%, #7498d2 35.7%, #7398d0 36.2%, #7498d0 36.6%, #799cd4, #82a1d7 42.6%, #8aa5d6 46.1%, #8ea9d6 49.1%, #90aad6 50%, #92aad6 50.4%, #96afd8 51.7%, #97afd8 52.5%, #99b3d5 53.8%, #9bb4d5 54.3%, #9cb5d4 54.7%, #a3b7d6, #a7b6d5 57.3%, #a9b8d5 58.1%, #b7c0d0 62.5%, #b9bfcf 62.9%, #bfc0cc 64.6%, #c2c2cc 65.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);*/
+
+	background: #4f6dab;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#4f6dab), color-stop(0.056, #5474b1), color-stop(0.228, #6685c6), color-stop(0.314, #6d91d1), color-stop(0.323, #6d95d3), color-stop(0.349, #7097d2), color-stop(0.357, #7498d2), color-stop(0.362, #7398d0), color-stop(0.366, #7498d0), color-stop(0.396, #799cd4), color-stop(0.426, #82a1d7), color-stop(0.461, #8aa5d6), color-stop(0.491, #8ea9d6), color-stop(0.5, #90aad6), color-stop(0.504, #92aad6), color-stop(0.517, #96afd8), color-stop(0.525, #97afd8), color-stop(0.538, #99b3d5), color-stop(0.543, #9bb4d5), color-stop(0.547, #9cb5d4), color-stop(0.56, #a3b7d6), color-stop(0.573, #a7b6d5), color-stop(0.581, #a9b8d5), color-stop(0.625, #b7c0d0), color-stop(0.629, #b9bfcf), color-stop(0.646, #bfc0cc), color-stop(0.655, #c2c2cc), color-stop(0.668, #c4c5ca), color-stop(0.676, #c6c5ca), color-stop(0.693, #cac8cb), color-stop(0.706, #cfcacb), color-stop(0.732, #d9cecc), color-stop(0.737, #dacfcb), color-stop(0.741, #ddcfcb), color-stop(0.762, #e2d0c1), color-stop(0.767, #e4d2c1), color-stop(0.775, #e9d2bf), color-stop(0.801, #eed3b5), color-stop(0.81, #f0d3b3), color-stop(0.814, #f1d3b1), color-stop(0.823, #f3d3ad), color-stop(0.827, #f3d3aa), color-stop(0.836, #f6d4a7), color-stop(0.84, #f7d2a4), color-stop(0.849, #f8d19e), color-stop(0.853, #f9d09b), color-stop(0.862, #facf95), color-stop(0.87, #fcce90), color-stop(0.875, #fbce8c), color-stop(0.883, #fccd88), color-stop(0.883, #fecc83), color-stop(0.892, #fec77c), color-stop(0.896, #fec47a), color-stop(0.9, #fec377), color-stop(0.905, #ffc072), color-stop(0.909, #ffbd6e), color-stop(0.918, #feb765), color-stop(0.926, #feaf62), color-stop(0.935, #faa15a), color-stop(0.952, #ef8656), color-stop(0.956, #ed8256), color-stop(0.974, #da7059), color-stop(0.978, #da7059), color-stop(0.978, #cc6657), color-stop(0.982, #be6056), color-stop(0.987, #b15c59), color-stop(0.991, #a05859), color-stop(0.995, #90595e), to(#90595e));
+	background-image: -webkit-linear-gradient(top, #4f6dab, #5474b1 5.6%, #6d91d1 31.4%, #8ea9d6 49.1%, #90aad6 50%, #97afd8 52.5%, #97afd8 52.5%, #a9b8d5 58.1%, #a9b8d5 58.1%, #b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+	background-image: -moz-linear-gradient(top, #4f6dab, #5474b1 5.6%, #6d91d1 31.4%, #8ea9d6 49.1%, #90aad6 50%, #97afd8 52.5%, #97afd8 52.5%, #a9b8d5 58.1%, #a9b8d5 58.1%, #b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+	background-image: -o-linear-gradient(top, #4f6dab, #5474b1 5.6%, #6d91d1 31.4%, #8ea9d6 49.1%, #90aad6 50%, #97afd8 52.5%, #97afd8 52.5%, #a9b8d5 58.1%, #a9b8d5 58.1%, #b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+	background-image: linear-gradient(to bottom, #4f6dab, #5474b1 5.6%, #6d91d1 31.4%, #8ea9d6 49.1%, #90aad6 50%, #97afd8 52.5%, #97afd8 52.5%, #a9b8d5 58.1%, #a9b8d5 58.1%, #b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+}
+
+.facet.midday,.innercircle.midday {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#35a4ff+13,6cb0dd+44,7cb8e2+66,7cb8e2+66,a2c8e5+100 */
+	background: rgb(53,164,255); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxMyUiIHN0b3AtY29sb3I9IiMzNWE0ZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI0NCUiIHN0b3AtY29sb3I9IiM2Y2IwZGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2NiUiIHN0b3AtY29sb3I9IiM3Y2I4ZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2NiUiIHN0b3AtY29sb3I9IiM3Y2I4ZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYTJjOGU1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(top, rgba(53,164,255,1) 13%, rgba(108,176,221,1) 44%, rgba(124,184,226,1) 66%, rgba(124,184,226,1) 66%, rgba(162,200,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,rgba(53,164,255,1)), color-stop(44%,rgba(108,176,221,1)), color-stop(66%,rgba(124,184,226,1)), color-stop(66%,rgba(124,184,226,1)), color-stop(100%,rgba(162,200,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(53,164,255,1) 13%,rgba(108,176,221,1) 44%,rgba(124,184,226,1) 66%,rgba(124,184,226,1) 66%,rgba(162,200,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(53,164,255,1) 13%,rgba(108,176,221,1) 44%,rgba(124,184,226,1) 66%,rgba(124,184,226,1) 66%,rgba(162,200,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(53,164,255,1) 13%,rgba(108,176,221,1) 44%,rgba(124,184,226,1) 66%,rgba(124,184,226,1) 66%,rgba(162,200,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(53,164,255,1) 13%,rgba(108,176,221,1) 44%,rgba(124,184,226,1) 66%,rgba(124,184,226,1) 66%,rgba(162,200,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35a4ff', endColorstr='#a2c8e5',GradientType=0 ); /* IE6-8 */
+}
+
+.facet.midnight,.innercircle.midnight {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#070419+0,0d0726+59,342b35+94,383024+100,565239+100 */
+	background: rgb(7,4,25); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA3MDQxOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU5JSIgc3RvcC1jb2xvcj0iIzBkMDcyNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk0JSIgc3RvcC1jb2xvcj0iIzM0MmIzNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzODMwMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTY1MjM5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(top, rgba(7,4,25,1) 0%, rgba(13,7,38,1) 59%, rgba(52,43,53,1) 94%, rgba(56,48,36,1) 100%, rgba(86,82,57,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(7,4,25,1)), color-stop(59%,rgba(13,7,38,1)), color-stop(94%,rgba(52,43,53,1)), color-stop(100%,rgba(56,48,36,1)), color-stop(100%,rgba(86,82,57,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(7,4,25,1) 0%,rgba(13,7,38,1) 59%,rgba(52,43,53,1) 94%,rgba(56,48,36,1) 100%,rgba(86,82,57,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(7,4,25,1) 0%,rgba(13,7,38,1) 59%,rgba(52,43,53,1) 94%,rgba(56,48,36,1) 100%,rgba(86,82,57,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(7,4,25,1) 0%,rgba(13,7,38,1) 59%,rgba(52,43,53,1) 94%,rgba(56,48,36,1) 100%,rgba(86,82,57,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(7,4,25,1) 0%,rgba(13,7,38,1) 59%,rgba(52,43,53,1) 94%,rgba(56,48,36,1) 100%,rgba(86,82,57,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070419', endColorstr='#565239',GradientType=0 ); /* IE6-8 */
+
+	color: white;
+
+}
+
+/* =============================================================================
+=============================== Welcome Message ================================
+================================================================================
+*/
+
+
+#welcome {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 35%;
+	transform: translateY(-50%);
+	font-family: pier;
+	font-size: 5.5vw;
+}
+
+#welcomeholder {
+	position: relative;
+	left: 15%;
+	width: 70%;
+	height: 100%;
+	position: relative;
+}
+
+#welcomemessage {
+	top: 15%;
+	position: relative;
+}
+
+.middletext {
+	text-align: center;
+	font-size: 19px;
+	float: center;
+	font-family: pier;
+}
+
+#welcomebutton {
+	text-align: center;
+	position: relative;
+	width: 19vw;
+	min-width: 132px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	top: 31%;
+	border-radius: 14px;
+	border-width: 0px;
+	font-family: pier;
+	font-size: 1.7vw;
+	outline: 0px;
+	background-color: #177FC8;
+	color: #efefef;
+}#welcomebutton:hover {
+	background-color:#3A98DB;
+}#welcomebutton:active {
+  /*background-color: #B8DEF9;
+  color: black;*/
+}
+
+.roundedbuttontext {
+	position: relative;
+	top: 2px;
+}
+
+/* Small Screen */
+@media screen and (max-width: 820px) {
+	#welcome { font-size: 45; }
+	#welcomebutton { width: 237px; font-size: 22px; }
+}
+
+/* Smaller Screen */
+@media screen and (max-width: 820px) {
+	#welcomebutton { top: 20%; }
+}
+
+
+
+/* =============================================================================
+================================ Midnight Facet ================================
+================================================================================
+*/
+
+#nightcanvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.star {
+	position: fixed;
+	z-index: 1;
+	width: auto;
+	display: inline;
+	content: url(/static/img/shine.png);
+	min-height: 3px;
+	max-height: 6px;
+	opacity: 0;
+}
+
+/* =============================================================================
+================================= Midday Facet =================================
+================================================================================
+*/
+
+.cloud {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index:0;
+}
+
+.cloudholder {
+	position: fixed;
+	z-index: 0;
+}
+
+
+
+
+
+/* =============================================================================
+=================================== Header =====================================
+================================================================================
+*/
+
+.headercontainer {
+	height: 7vw; /*TODO: change with media change*/
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	background-attachment: fixed !important;
+}
+
+.header {
+	position: relative;
+	float: left;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	overflow: auto;
+
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+
+.smallcontent {
+	font-family: pier;
+	display: inline-block;
+	margin: 2%;
+  	font-size: 2.4vw; /*18px biggest*/
+  	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+  	transition: all .2s ease-in-out;
+  	z-index: 1;
+}.smallcontent:hover {
+	-moz-transform: scale(1.1);
+  	-webkit-transform: scale(1.1);
+  	transform: scale(1.1);
+}
+
+.smallcontent > a, .largecontent > a {
+	color:inherit;
+	text-decoration: none;
+  	cursor:pointer;
+}
+
+.largecontent {
+	font-family: pier;
+	display: inline-block;
+	font-size: 3.8vw; /*32px biggest*/
+	margin-left: 5%;
+	margin-right: 5%;
+  	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+  	transition: all .2s ease-in-out;
+  	z-index: 1;
+}.largecontent:hover {
+	-moz-transform: scale(1.1);
+  	-webkit-transform: scale(1.1);
+  	transform: scale(1.1);
+}
+
+.subtextmessage {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	font-size: 4.9vw; /*42px biggest*/
+	z-index: 1;
+}
+
+
+/* =============================================================================
+================================== Content =====================================
+================================================================================
+*/
+
+#mainpage {
+	min-height: 100%;
+	z-index: 1;
+	overflow: auto;
+}.mainpage::-webkit-scrollbar { 
+    display: none; 
+}
+
+.maincontent {
+	width: 61%;
+	max-width: 820px;
+	text-align: justify;
+	margin: 0 auto;
+	position: relative;
+	font-family: pier;
+	font-size: 16px;
+	margin-top: 7vw;
+	z-index: 1;
+	padding-bottom: 125px;
+	overflow: auto;
+}.maincontent::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+
+
+
+/* =============================================================================
+=============================== Navigation Bar =================================
+================================================================================
+*/
+
+.footercontainer {
+	bottom: 0;
+	height: 125px;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	background-attachment: fixed !important;
+	background-origin: 0 0;
+}
+
+#facetnavigation {
+	position: relative;
+	width: 70%;
+	margin-bottom: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	max-width: 620px;
+	top: 20%; /* Becuase of animating current circle */
+}
+
+.navcircle {
+	z-index: 2;
+	position: relative;
+	top: 5%;
+	border-radius: 50%;
+	border-width: 10px;
+	border-color: white;
+	background-color: black;
+	height: 90%; /* Width dynamically set in Javascript */
+}::-moz-selection,.navcircle::selection{...}
+
+.innercircle {
+	left: 5%;
+    cursor: pointer;
+}
+
+.backcircle {
+	top: 0;
+	height: 82px;
+	background-color: white;
+  	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+  	transition: all .2s ease-in-out;
+}
+
+.hover:hover {
+	background-color: #efefef;
+	border-top: 0px;
+	-moz-transform: scale(1.2);
+  	-webkit-transform: scale(1.2);
+  	transform: scale(1.2);
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.center {
+	margin: auto;
+}
+
+.arrow {
+    position: fixed;
+    margin: auto 0;
+}.arrow:hover {
+    background-color:rgba(0,0,0.5);
+}
+
+.arrow-flipped {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.arrow-normal {
+
+}
+
+/* Smaller Screen */
+@media screen and (max-width: 600px) {
+	.smallcontent { display: none; }
+	.largecontent { font-size: 33px; }
+	.subtextmessage { font-size: 52px; }
+	.headercontainer { height: 57px; }
+	.maincontent { margin-top: 58px; }
+    .arrow { display: none; }
+}
+
+
+/* Small Screen */
+@media screen and (min-width: 820px) {
+	.smallcontent { font-size: 13px; }
+	.largecontent { font-size: 21px; }
+	.subtextmessage { font-size: 27px; }
+}
+
+/* Large Screen*/
+@media screen and (min-width: 820px) {
+	.smallcontent { font-size: 18px; }
+	.largecontent { font-size: 32px; }
+	.subtextmessage { font-size: 42px; }
+}
+
+
