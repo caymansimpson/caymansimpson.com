@@ -1,0 +1,101 @@
+<html>
+<head>
+        <title>Cayman Simpson</title>
+    <link rel='shortcut icon' href='static/img/favicon.ico' type='static/favicon.ico'/>
+    <link rel="icon" href="static/img/favicon.ico" type="image/ico"/>
+    <link rel="stylesheet" type="text/css" href="static/css/cayman2.css"/> <!-- Custom CSS -->
+    <script src="static/js/jquery-1.11.1.min.js"></script>
+    <script src="static/js/cayman2.js"></script> <!-- Custom JS -->
+    <script src="static/js/underscore.js"></script>
+
+    <script type="text/template" id='facet-template'>
+        <div class="facet-wrapper">
+          <h3><%=facetName%></h3>
+          <div class="facet-description">
+            <%=facetDescription%>
+          </div>
+        </div>
+    </script>
+
+    <script type='application/json' id='welcome'>
+      {
+        "facetClass": "welcome",
+        "facetName": "Welcome",
+        "facetDescription": "<p>My name is Cayman Simpson and I'm a Stanford student with a degree in Mathematical and Computational Science and a minor in Sociology.</p><p>I aspire to be an impactful humanitarian and a successful engineer. This is me.</p>",
+        "initializeFunc": "paintWelcome"
+      }
+    </script>
+
+    <script type='application/json' id='morning'>
+      {
+        "facetClass": "morning",
+        "facetName": "Aspirer",
+        "facetDescription": "<p>I have always and will always aspire for both myself and the world.</p><p>I believe that the world will some day be a better place. It is my mission to do what I can to realize that vision - I believe I am on this Earth to make an impact and that's what I plan to do.</p><p>In that same way, I always aspire to be better than I am now: to be more empathetic, intelligent and fearless. In everything I do, I learn from both my successes and failures to inevitably grow into a better and more successful person.</p>",
+        "initializeFunc": "doSomething"
+      }
+    </script>
+
+    <script type='application/json' id='midday'>
+      {
+        "facetClass": "midday",
+        "facetName": "Humanitarian",
+        "facetDescription": "<p>In a perfect world, everyone would have equal rights as a human being and would be respected as such. This is certainly an idealistic and naive perspective, but a perspective I hold nonetheless. I want to work to guide the world to this place.</p><p>The issues I care about:</p><ul><li>Race Relations in the US</li><li>Economic Inequality in the US</li><li>Growth Mindsets in Early Education</li><li>Gender Equality and Sexual Assault</li><li>Mental Health and Suicide</li><li>Global Poverty and Education</li><li>Environmental Preservation and Biodiversity</li></ul>",
+        "initializeFunc": "paintClouds"
+      }
+    </script>
+
+    <script type='application/json' id='midnight'>
+      {
+        "facetClass": "midnight",
+        "facetName": "Engineer",
+        "facetDescription": "<p>I like to be given fancy frameworks, tough guidelines and nasty, but impactful problems. I tend to collaborate with others, communicate effectively and think creatively to produce the most inventive and original solutions I can.</p><p>While I prefer to think high-level and abstractly, I am a perfectionist at heart and will only do things in the right and <em>scalable</em> way; I have no problem digging in the weeds to leave no stone unturned in order to turn out a great product.</p><p>I believe these qualities make me a great and unique engineer.</p>",
+        "initializeFunc": "paintStars"
+      }
+    </script>
+
+</head>
+<body>
+    <div class="main-wrapper">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h2>Header Holder</h2>
+        </div>
+
+        <!-- MAIN SLIDE -->
+        <div class="slide">
+            <div style="position: static">
+            <div class="arrow-holder left flipped">
+              <img src="static/img/arrow.png"/>
+            </div>
+
+            <div class="arrow-holder right">
+                <img src="static/img/arrow.png"/>
+            </div>
+
+            <!-- MAIN CONTENT  -->
+            <div class="content middle">
+
+                <div class="facet-name">
+                  <h3>Facet Name</h3>
+                </div>
+
+                <div class="facet-description">
+                  This is the description. That should go on forever and forever and forever and forever and forever and forever and forever and forever and forever.
+                </div>
+
+            </div>
+          
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <h2>Footer</h2>
+            <button onClick="transition('morning')">Morning</button>
+            <button onClick="transition('midday')">Midday</button>
+            <button onClick="transition('midnight')">Midnight</button>
+        </div>
+    </div>
+
+</body>
+</html>

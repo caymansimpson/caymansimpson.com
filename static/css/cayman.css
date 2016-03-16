@@ -114,6 +114,8 @@ ul {
 	background-image: -moz-linear-gradient(top, #4f6dab, #5474b1 5.6%, #6d91d1 31.4%, #8ea9d6 49.1%, #90aad6 50%, #97afd8 52.5%, #97afd8 52.5%, #a9b8d5 58.1%, #a9b8d5 58.1%, #b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
 	background-image: -o-linear-gradient(top, #4f6dab, #5474b1 5.6%, #6d91d1 31.4%, #8ea9d6 49.1%, #90aad6 50%, #97afd8 52.5%, #97afd8 52.5%, #a9b8d5 58.1%, #a9b8d5 58.1%, #b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
 	background-image: linear-gradient(to bottom, #4f6dab, #5474b1 5.6%, #6d91d1 31.4%, #8ea9d6 49.1%, #90aad6 50%, #97afd8 52.5%, #97afd8 52.5%, #a9b8d5 58.1%, #a9b8d5 58.1%, #b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%,#b7c0d0 62.5%, #c4c5ca 66.8%, #c6c5ca 67.6%, #cac8cb 69.3%, #cfcacb 70.6%, #d9cecc 73.2%, #dacfcb 73.7%, #ddcfcb 74.1%, #e2d0c1 76.2%, #e4d2c1 76.7%, #e9d2bf 77.5%, #eed3b5 80.1%, #f0d3b3 81%, #f1d3b1 81.4%, #f3d3ad 82.3%, #f3d3aa 82.7%, #f6d4a7 83.6%, #f7d2a4 84%, #f8d19e 84.9%, #f9d09b 85.3%, #facf95 86.2%, #fcce90 87%, #fbce8c 87.5%, #fccd88 88.3%, #fecc83 88.3%, #fec77c 89.2%, #fec47a, #fec377 90%, #ffc072 90.5%, #ffbd6e 90.9%, #feb765 91.8%, #feaf62 92.6%, #faa15a 93.5%, #ef8656 95.2%, #ed8256 95.6%, #da7059 97.4%, #da7059 97.8%, #cc6657 97.8%, #be6056 98.2%, #b15c59 98.7%, #a05859, #90595e 99.5%, #90595e);
+
+    color: black;
 }
 
 .facet.midday,.innercircle.midday {
@@ -128,6 +130,8 @@ ul {
 	background: -ms-linear-gradient(top, rgba(53,164,255,1) 13%,rgba(108,176,221,1) 44%,rgba(124,184,226,1) 66%,rgba(124,184,226,1) 66%,rgba(162,200,229,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(53,164,255,1) 13%,rgba(108,176,221,1) 44%,rgba(124,184,226,1) 66%,rgba(124,184,226,1) 66%,rgba(162,200,229,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35a4ff', endColorstr='#a2c8e5',GradientType=0 ); /* IE6-8 */
+
+    color: black;
 }
 
 .facet.midnight,.innercircle.midnight {
@@ -221,7 +225,6 @@ ul {
 @media screen and (max-width: 820px) {
 	#welcomebutton { top: 20%; }
 }
-
 
 
 /* =============================================================================
